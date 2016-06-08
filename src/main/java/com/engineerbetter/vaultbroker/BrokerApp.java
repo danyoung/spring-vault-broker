@@ -7,8 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 public class BrokerApp {
 	
-	public static void main() {
-		SpringApplication.run(BrokerApp.class);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(BrokerApp.class, args);
+    }
 
 }
