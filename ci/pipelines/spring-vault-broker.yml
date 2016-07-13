@@ -1,0 +1,17 @@
+---
+jobs:
+- name: maven-test
+  public: false
+  serial: true
+  plan:
+  - get: spring-vault-broker
+    trigger: true
+  - task: mvn-test
+    file: spring-vault-broker/ci/tasks/mvn-test.yml
+
+resources:
+- name: spring-vault-broker
+  type: git
+  source:
+      uri: https://github.com/danyoung/spring-vault-broker.git
+      branch: master
